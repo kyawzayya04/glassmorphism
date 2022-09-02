@@ -8,7 +8,12 @@ body{
 	height: 100vh;
 	/*width: 100%;*/
 	font-family: 'Open Sans', sans-serif;
-	background: url("./img/myeik1.jpg");
+	background: linear-gradient(
+		45deg,
+		rgba(0, 0, 0, 0.2),
+		rgba(0, 0, 0, 0.1)
+	) 
+	,url("./img/myeik1.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -38,6 +43,8 @@ body{
 	border-right: 1px solid #ddd;
 	border-radius: 20px;
 	backdrop-filter: blur(2px);
+
+	display: block;
 
 	padding: 30px 30px;
 	margin: 0px 50px;
@@ -134,4 +141,17 @@ body{
 	/*transform: translateY(1px);*/
 	background: cyan;
 	color: #fff;
+}
+
+@media(max-width: 720px){
+	.container{
+		height: 100vh;
+		display: block;
+		position: relative;
+	}
+
+	.card{
+		margin: 40px 18%;
+		
+	}
 }
