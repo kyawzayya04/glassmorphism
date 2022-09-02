@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Glassmorphism</title>
+		<link href="./style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		
+		<div class="container">
+			
+			<div class="card">
+				
+				<div class="img">
+					<img src="./img/users/user1.jpg" alt="user1">
+				</div>
+
+				<h3>Ms.Anton</h3>
+
+				<small>Lorem ipsum dolor sit ame et dolore magna aliqua.</small>
+
+				<form action="" method="" class="form">
+					
+					<div class="card-form">						
+						<input type="text" name="username" id="username" class="form-control" placeholder="Enter Your Username" autocomplete="off">
+						<label for="username">Username</label>
+					</div>
+
+					<div class="card-form">						
+						<input type="password" name="password" id="password" class="form-control" placeholder="Enter Your Password" autocomplete="off">
+						<label for="password">Password</label>
+					</div>
+
+					<a href="javascript:void(0);" class="btn">Log In</a>
+
+				</form>
+
+			</div>
+
+			<div class="card">
+				
+				<div class="img">
+					<img src="./img/users/user2.jpg" alt="user2">
+				</div>
+
+				<h3>Mr.Richard</h3>
+
+				<small>Lorem ipsum dolor sit ame et dolore magna aliqua.</small>
+
+				<form action="" method="" class="form">
+					
+					<div class="card-form">						
+						<input type="text" name="username" id="username" class="form-control" placeholder="Enter Your Username" autocomplete="off">
+						<label for="username">Username</label>
+					</div>
+
+					<div class="card-form">						
+						<input type="password" name="password" id="password" class="form-control" placeholder="Enter Your Password" autocomplete="off">
+						<label for="password">Password</label>
+					</div>
+
+					<a href="javascript:void(0);" class="btn">Log In</a>
+
+				</form>
+
+			</div>
+
+			<div class="card">
+				
+				<div class="img">
+					<img src="./img/images/profile.png" alt="profile">
+				</div>
+
+				<h3>Mr.Steve</h3>
+
+				<small>Lorem ipsum dolor sit ame et dolore magna aliqua.</small>
+
+				<form action="" method="" class="form">
+					
+					<div class="card-form">						
+						<input type="text" name="username" id="username" class="form-control" placeholder="Enter Your Username" autocomplete="off">
+						<label for="username">Username</label>
+					</div>
+
+					<div class="card-form">						
+						<input type="password" name="password" id="password" class="form-control" placeholder="Enter Your Password" autocomplete="off">
+						<label for="password">Password</label>
+					</div>
+
+					<a href="javascript:void(0);" class="btn">Log In</a>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	<script type="text/javascript" src="./vanilla-tilt.js"></script>
+
+	<script type="text/javascript">
+		VanillaTilt.init(document.querySelectorAll(".card"), {
+			max: 25,
+			speed: 400,
+			glare: true,
+			"max-glare": 0.2,
+		});
+	
+		//It also supports NodeList
+		VanillaTilt.init(document.querySelectorAll(".card"));
+	</script>
+
+	</body>
+</html>
