@@ -5,15 +5,16 @@
 }
 
 body{
-	height: 100vh;
+	height: 100%;
 	/*width: 100%;*/
 	font-family: 'Open Sans', sans-serif;
-	background: linear-gradient(
-		45deg,
-		rgba(0, 0, 0, 0.2),
-		rgba(0, 0, 0, 0.1)
+	/*background: linear-gradient(
+		360deg,
+		rgba(0, 0, 0, 0.3),
+		rgba(0, 0, 0, 0)
 	) 
-	,url("./img/myeik1.jpg");
+	,url("./img/myeik1.jpg");*/
+	background: #03061c;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -22,11 +23,106 @@ body{
 	padding: 0;
 }
 
-.container{
+.boxx{
+	width: 100%;
 	height: 100vh;
+	/*background: red;*/
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	overflow: hidden;
+}
+
+.box{
+	width: 400px;
+	height: 600px;
+	background: linear-gradient(
+		steelblue,
+		blueviolet
+	);
+	border-radius: 20px;
+
+	position: absolute;
+	left: 45%;
+	bottom: 50% ;
+
+	transform: translateX(-50%);
+
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+@keyframes myani{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+.box::before{
+	content: "";
+
+	width: 250px;
+	height: 800px;
+	background: linear-gradient(
+		#0afada,
+		#f2dc18
+	);
+
+	position: absolute;
+	left: 75px;
+	top: -20%;
+
+	animation: myani;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.box::after{
+	content: "";
+	position: absolute;
+	inset: 4px;
+	background: #101f40;
+	border-radius: 16px;
+}
+
+.box:nth-of-type(2){
+	position: absolute;
+	left: 5%;
+	top: 30%;
+}
+
+.box:nth-of-type(3){
+	position: absolute;
+	left: 40%;
+	top: 60%;
+}
+
+.box:nth-of-type(4){
+	position: absolute;
+	left: 72%;
+	top: 10%;
+
+	transform: rotate(90deg);
+}
+
+.container{
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	position: absolute;
+	left: 50%;
+	top: 0;
+
+	transform: translateX(-50%);
 
 	/*padding-top: 50px;*/
 
@@ -36,13 +132,14 @@ body{
 .card{
 	width: 300px;
 	text-align: center;
+
 	color: #fff;
 	box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.5);
 	border: none;
-	border-top: 1px solid #ddd;
-	border-right: 1px solid #ddd;
+	border-top: 1px solid #aaa;
+	border-right: 1px solid #aaa;
 	border-radius: 20px;
-	backdrop-filter: blur(2px);
+	backdrop-filter: blur(10px);
 
 	display: block;
 
@@ -55,7 +152,7 @@ body{
 }
 
 .card h3{
-	color: cyan;
+	color: #0099ff;
 	font-weight: 900;
 }
 
@@ -71,6 +168,7 @@ body{
 .card img{
 	width: 150px;
 	border-radius: 50%;
+	/*border: 2px solid steelblue;*/
 	box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.3);
 
 	transition: all 0.5s;
@@ -91,7 +189,7 @@ body{
 	color: #fff;
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid cyan;
+	border-bottom: 2px solid #1771ad;
 	letter-spacing: 1px;
 
 	padding: 10px;
@@ -108,7 +206,7 @@ body{
 
 .card-form label{
 	display: block;
-	color: cyan;
+	color: #02a4d1;
 	font-weight: bold;
 	letter-spacing: 1px;
 	
@@ -126,7 +224,7 @@ body{
 	width: 100%;
 	display: block;
 	text-decoration: none;
-	color: cyan;
+	color: #1771ad;
 	font-weight: bold;
 	border: none;
 	border-radius: 10px;
@@ -139,11 +237,23 @@ body{
 
 .btn:hover{
 	/*transform: translateY(1px);*/
-	background: cyan;
+	background: #1771ad;
 	color: #fff;
 }
 
 @media(max-width: 720px){
+
+	body{
+		/*width: 100vh;*/
+		overflow-x: hidden;
+	}
+
+	.boxx{
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+	}
+
 	.container{
 		height: 100vh;
 		display: block;
@@ -153,5 +263,35 @@ body{
 	.card{
 		margin: 40px 18%;
 		
+	}
+
+	.box{
+		position: absolute;
+		left: 50%;
+		top: -55%;
+	}
+
+	.box:nth-of-type(2){
+		position: absolute;
+		left: -10%;
+		top: 60%;
+	}
+
+	.box:nth-of-type(3){
+		position: absolute;
+		left: 95%;
+		top: 95%;
+	}
+
+	.box:nth-of-type(4){
+		height: 530px;
+
+		position: absolute;
+		left: 5%;
+		top: 210%;
+
+		margin-bottom: 30px;
+
+		transform: rotate(0deg);
 	}
 }
